@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ========== Head.jsx ========== */
+
+/* .top-header .After::after {
+  content: '|';
+} */
+
+.container .Input {
+  width: 100%;
+  border: none;
+}
+
+.container-1 .UL {
+  display: flex;
+  vertical-align: middle;
+}
+
+.container-1 .UL li {
+  display: inline-block;
+  list-style: none;
+  position: relative;
+}
+
+.container-1 .UL li .A {
+  padding: 20px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+/* ========== Foot.jsx ========== */
+
+.footer-box .H2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0px;
+  line-height: 25px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.footer-box .footer-ul li {
+  color: #191919;
+  line-height: 25px;
+  padding: 5px 0px;
+}
+
+.footer-box .footer-ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-box .footer-ul li a:hover {
+  color: #c09578;
+  transition: all 0.5s;
+}
+
+.footer-box-2 .H3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 11px 0px 15px;
+  line-height: 25px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.footer-box-2 .Input {
+  width: 100%;
+  background-color: white;
+  color: #bbbbbb;
+  font-size: 15px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: 1px solid #eeeeee;
+  padding: 8px 20px;
+}
+
+.footer-box-2 .Input:focus {
+  outline: none;
+  border: 1px solid #c09578;
+}
+
+.footer-box-2 .Button {
+  width: 100%;
+  background-color: #c09578;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  padding: 0px 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.footer-end .footer-ul-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-end .footer-ul-2 li {
+  list-style: none;
+  display: inline-block;
+  font-size: 25px;
+  color: #555555;
+}
+
+.footer-end .footer-ul-2 li a {
+  border-radius: 50%;
+  min-width: 100px;
+  height: 45px;
+  font-size: 25px;
+  line-height: 45px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+/* ========== Main.jsx ========== */
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.container-1 .H5 {
+  color: #c09578;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.container-1 .H3 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  max-width: 370px;
+  line-height: 1;
+}
+
+.container-1 .Span {
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #c09578;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.container-1 .A1,
+.container-2 .A1,
+.container-3 .A1 {
+  padding: 7px 20px;
+  background-color: #c09578;
+  border: 1px solid #c09578;
+  color: white;
+  min-width: 110px;
+  border-radius: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.5s;
+  line-height: 25px;
+  text-decoration: none !important;
+}
+
+.container-1 .A1:hover,
+.container-2 .A1:hover,
+.container-3 .A1:hover {
+  background-color: black;
+  border-color: black;
+  transform: all 0.5s;
+}
+
+.container-2 .H4 {
+  color: #c09578;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.container-2 .H3 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.container-3 .H3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.container-3 .Box-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  text-align: center;
+}
+
+.container-3 .Box-1 .H31 {
+  color: #c09578;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.css-10139ve-MuiPaper-root-MuiCard-root {
+  box-shadow: none !important;
+}
+
+.container-4 .H3 {
+  font-size: 30px;
+  line-height: 1;
+  margin: 0;
+  display: block;
+}
+
+.container-4 .P1 {
+  font-size: 15px;
+  color: #555555;
+  margin-top: 12px;
+}
+
+.container-5 .H3 {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  color: #222222;
+}
+
+.container-5 .P1 {
+  font-size: 15px;
+  color: #555555;
+  margin-top: 12px;
+}
+
+.container-5 .slick-dots {
+  display: none !important;
+}
+
+.container-5 .image17 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0px auto 30px;
+  vertical-align: middle;
+}
+
+.container-5 .P2 {
+  font-size: 16px;
+  color: #555555;
+  line-height: 25px;
+  margin: 0px 0px 35px;
+  letter-spacing: 0.4px;
+}
+
+.container-5 .span1 {
+  display: inline-block;
+  color: #222222;
+  font-size: 20px;
+}
+
+.container-5 .span2 {
+  color: #999999;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.container-5 .span2::before {
+  content: ' / ';
+  margin: 0px 8px;
+}
+
+.container-6 .span3::before {
+  position: absolute;
+  content: '';
+  width: 70px;
+  border-bottom: 4px solid #c09578;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container-6 .image20 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* .container-6 .Box-2:hover .Box-3 {
+  display: block !important;
+  transition: 0.7s;
+} */
+
+.container-6 .Box-2:hover .image20 {
+  transform: scale(1.1);
+  filter: brightness(70%);
+  transition: 0.7s;
+}
+
+/* ========== Shop.jsx ========== */
+
+.container-7 .span1 {
+  display: inline-block;
+  color: #999999;
+  font-size: 18px;
+}
+
+.container-7.span2 {
+  color: #999999;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container-7 .span2::before {
+  content: ' >> ';
+  font-size: 10px;
+  margin: 0px 8px;
+  color: #999999;
+}
+
+.container-8 .slick-dots {
+  bottom: 15px !important;
+}
