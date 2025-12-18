@@ -282,10 +282,10 @@ const RickApi = () => {
                     <Container sx={{ padding: '80px 15px' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                             <Box sx={{ display: { xs: 'block', sm: 'flex' }, flexWrap: 'wrap', textAlign: 'center' }}>
-                                <Box sx={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: { xs: '15px', sm: '0px' }, ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>
+                                <Box sx={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: { xs: '10px', sm: '0px' }, ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>
                                     characters : 826
                                 </Box>
-                                <Box sx={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: { xs: '0px', sm: '25px' }, marginBottom: { xs: '15px', sm: '0px' }, ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>
+                                <Box sx={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: { xs: '0px', sm: '25px' }, marginBottom: { xs: '10px', sm: '0px' }, ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>
                                     locations : 126
                                 </Box>
                                 <Box sx={{ textTransform: 'uppercase', fontWeight: 'bold', marginLeft: { xs: '0px', sm: '25px' }, ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>
