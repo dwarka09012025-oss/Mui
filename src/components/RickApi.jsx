@@ -49,6 +49,15 @@ const RickApi = () => {
     //     setAnchorElUser(null);
     // };
 
+    const characters = [
+        { id: 1, name: "Bootleg Portal Chemist Rick", status: "Dead", species: "Human", location: "Citadel of Ricks", firstSeen: "The Ricklantis Mixup", image: image1, alive: false },
+        { id: 2, name: "Gene", status: "Alive", species: "Human", location: "Earth (Replacement Dimension)", firstSeen: "The Whirly Dirly Conspiracy", image: image2, alive: true },
+        { id: 3, name: "Photography Raptor", status: "Dead", species: "Alien", location: "Earth (Replacement Dimension)", firstSeen: "Total Rickall", image: image3, alive: false },
+        { id: 4, name: "Teacher Rick", status: "Alive", species: "Human", location: "Citadel of Ricks", firstSeen: "The Ricklantis Mixup", image: image4, alive: true },
+        { id: 5, name: "Tony’s Wife", status: "Dead", species: "Alien", location: "Globaflyn", firstSeen: "The Old Man and the Seat", image: image5, alive: false },
+        { id: 6, name: "Rick's Garage", status: "Alive", species: "Robot", location: "Earth (Replacement Dimension)", firstSeen: "Rickternal Friendshine", image: image6, alive: true },
+    ];
+
     return (
         <>
             <Box>
@@ -65,7 +74,6 @@ const RickApi = () => {
                                     display: { xs: 'none', md: 'flex' },
                                     fontFamily: 'monospace',
                                     fontWeight: 700,
-                                    // letterSpacing: '.3rem',
                                     color: 'white',
                                     textDecoration: 'none',
                                 }}
@@ -118,7 +126,6 @@ const RickApi = () => {
                                     flexGrow: 1,
                                     fontFamily: 'monospace',
                                     fontWeight: 700,
-                                    // letterSpacing: '.3rem',
                                     color: 'inherit',
                                     textDecoration: 'none',
                                 }}
@@ -139,6 +146,7 @@ const RickApi = () => {
                         </Toolbar>
                     </Container>
                 </AppBar>
+
                 <Box>
                     <Container sx={{ padding: '0px 15px' }}>
                         <Typography sx={{ fontSize: { xs: '3rem', sm: '3.5rem', md: '4.2rem', lg: '5.4rem' }, fontWeight: '900', display: 'flex', justifyContent: 'center', py: '100px', textAlign: 'center' }}>
@@ -146,15 +154,16 @@ const RickApi = () => {
                         </Typography>
                     </Container>
                 </Box>
-                <Box sx={{ bgcolor: 'black', color: 'white' }}>
+
+                {/* <Box sx={{ bgcolor: 'black', color: 'white' }}>
                     <Container sx={{ padding: '80px 15px' }}>
                         <Grid container spacing={2}>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image1} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Bootleg Portal Chemist Rick</Typography>
                                             <Typography><CircleIcon sx={{ color: 'red', fontSize: '10px', marginRight: '5px' }} />Dead - Human</Typography>
@@ -172,10 +181,10 @@ const RickApi = () => {
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image2} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Gene</Typography>
                                             <Typography><CircleIcon sx={{ color: 'green', fontSize: '10px', marginRight: '5px' }} />Alive - Human</Typography>
@@ -193,10 +202,10 @@ const RickApi = () => {
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image3} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Photography Raptor</Typography>
                                             <Typography><CircleIcon sx={{ color: 'red', fontSize: '10px', marginRight: '5px' }} />Dead - Alien</Typography>
@@ -214,10 +223,10 @@ const RickApi = () => {
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image4} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Teacher Rick</Typography>
                                             <Typography><CircleIcon sx={{ color: 'green', fontSize: '10px', marginRight: '5px' }} />Alive - Human</Typography>
@@ -235,10 +244,10 @@ const RickApi = () => {
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image5} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Tony’s Wife</Typography>
                                             <Typography><CircleIcon sx={{ color: 'red', fontSize: '10px', marginRight: '5px' }} />Dead - Alien</Typography>
@@ -256,10 +265,10 @@ const RickApi = () => {
                             </Grid>
                             <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Box sx={{ width: '200px', height: '220px' }}>
+                                    <Box sx={{ width: '40%', height: '220px' }}>
                                         <img src={image6} style={{ height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
                                     </Box>
-                                    <Box sx={{ width: '368px', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
+                                    <Box sx={{ width: '60%', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', bgcolor: 'rgba(60, 60, 60, 1)', padding: '10px', display: 'flex', flexDirection: 'column' }}>
                                         <Box sx={{ marginBottom: '20px' }}>
                                             <Typography sx={{ fontSize: '20px', fontWeight: '800', ':hover': { color: 'orange', transition: '0.5s', cursor: 'pointer' } }}>Rick's Garage</Typography>
                                             <Typography><CircleIcon sx={{ color: 'green', fontSize: '10px', marginRight: '5px' }} />Alive - Robot</Typography>
@@ -277,7 +286,99 @@ const RickApi = () => {
                             </Grid>
                         </Grid>
                     </Container>
+                </Box> */}
+
+                <Box sx={{ bgcolor: 'rgb(32, 35, 41)', color: 'white', minHeight: '100vh' }}>
+                    <Container sx={{ padding: '80px 15px' }}>
+                        <Grid container spacing={3}>
+                            {characters.map((char) => (
+                                <Grid key={char.id} size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: { xs: 'column', sm: 'row' },
+                                            bgcolor: 'rgb(60, 62, 68)',
+                                            borderRadius: '10px',
+                                            overflow: 'hidden',
+                                            height: { xs: 'auto', sm: '220px' },
+                                            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                                        }}
+                                    >
+                                        <Box sx={{ width: { xs: '100%', sm: '40%' }, height: { xs: '250px', sm: '100%' } }}>
+                                            <img
+                                                src={char.image}
+                                                alt={char.name}
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                }}
+                                            />
+                                        </Box>
+
+                                        <Box
+                                            sx={{
+                                                width: { xs: '100%', sm: '60%' },
+                                                padding: '15px',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                justifyContent: 'space-between'
+                                            }}
+                                        >
+                                            <Box>
+                                                <Typography
+                                                    variant="h5"
+                                                    sx={{
+                                                        fontWeight: '800',
+                                                        cursor: 'pointer',
+                                                        '&:hover': { color: 'orange' },
+                                                        transition: '0.3s',
+                                                        lineHeight: 1.2,
+                                                        mb: 0.5
+                                                    }}
+                                                >
+                                                    {char.name}
+                                                </Typography>
+                                                <Typography
+                                                    component="div"
+                                                    sx={{ display: 'flex', alignItems: 'center', fontSize: '16px', fontWeight: '500' }}
+                                                >
+                                                    <CircleIcon
+                                                        sx={{
+                                                            color: char.alive ? '#55cc44' : '#d63d2e',
+                                                            fontSize: '10px',
+                                                            marginRight: '8px'
+                                                        }}
+                                                    />
+                                                    {char.status} - {char.species}
+                                                </Typography>
+                                            </Box>
+
+                                            <Box sx={{ mt: { xs: 2, sm: 0 } }}>
+                                                <Typography sx={{ color: 'rgb(158, 158, 158)', fontSize: '15px', fontWeight: '500' }}>
+                                                    Last known location:
+                                                </Typography>
+                                                <Typography sx={{ '&:hover': { color: 'orange' }, cursor: 'pointer', transition: '0.3s' }}>
+                                                    {char.location}
+                                                </Typography>
+                                            </Box>
+
+                                            <Box sx={{ mt: { xs: 2, sm: 0 } }}>
+                                                <Typography sx={{ color: 'rgb(158, 158, 158)', fontSize: '15px', fontWeight: '500' }}>
+                                                    First seen in:
+                                                </Typography>
+                                                <Typography sx={{ '&:hover': { color: 'orange' }, cursor: 'pointer', transition: '0.3s' }}>
+                                                    {char.firstSeen}
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Container>
                 </Box>
+
                 <Box sx={{ bgcolor: 'black', color: 'rgb(158, 158, 158)' }}>
                     <Container sx={{ padding: '80px 15px' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
