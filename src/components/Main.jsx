@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import Layout from './Layout'
-import { Box, Container, Grid } from '@mui/material'
+import { Box, Container, Grid, Button } from '@mui/material'
 import Slider from "react-slick"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -43,7 +43,7 @@ const Main = () => {
         speed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000
     };
     const settings1 = {
@@ -53,143 +53,186 @@ const Main = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    const slides = [
+        { img: image1, sub: "Sale up to 40% off!", title: "Spring Summer Collection", price: "$270.00" },
+        { img: image2, sub: "Take a jewelry", title: "Up to 25% off order now", price: "$170.00" },
+        { img: image3, sub: "Ysera Best collection", title: "A range of jewelry", price: "$250.00" },
+    ];
 
     return (
         <>
             <Layout>
-                <section style={{ padding: '50px 0px' }}>
-                    <Container className='container-1'>
+                <Box component="section" sx={{ py: { xs: 4, md: 8 } }}>
+                    <Container>
                         <Grid container>
                             <Grid size={12}>
                                 <Slider {...settings}>
-                                    <Box sx={{ height: '620px', position: 'relative' }}>
-                                        <img src={image1} alt="slider image" style={{ width: 'auto', objectFit: 'cover', padding: '0px 191px' }} />
-                                        <Box sx={{ position: 'absolute', top: '45%', left: '25%' }}>
-                                            <h5 className='H5'>Sale up to 40% off!</h5>
-                                            <h3 className='H3'>Spring Summer<br />Collection</h3>
-                                            <Box sx={{ fontSize: '18px', fontWeight: '500', marginBottom: '35px', color: '#5b5b5bff' }}>
-                                                New Price :
-                                                <span className='Span'>$270.00</span>
+                                    {slides.map((slide, index) => (
+                                        <Box key={index} sx={{
+                                            position: 'relative',
+                                            height: { xs: '400px', sm: '500px', md: '620px' }, // Dynamic height
+                                            overflow: 'hidden',
+                                            bgcolor: '#f9f9f9',
+                                            padding: '0px 20px'
+                                        }}>
+                                            <img
+                                                src={slide.img}
+                                                alt="slider"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                }}
+                                            />
+
+                                            <Box sx={{
+                                                position: 'absolute',
+                                                top: '50%',
+                                                left: { xs: '10%', md: '15%' },
+                                                transform: 'translateY(-50%)',
+                                                zIndex: 2,
+                                                textAlign: 'left',
+                                                maxWidth: { xs: '65%', md: '50%' }
+                                            }}>
+                                                <Typography
+                                                    variant="h6"
+                                                    className='H5'
+                                                    sx={{
+                                                        color: '#c09578',
+                                                        fontSize: { xs: '0.7rem', md: '1.25rem' },
+                                                        mb: 1
+                                                    }}
+                                                >
+                                                    {slide.sub}
+                                                </Typography>
+
+                                                <Typography
+                                                    variant="h2"
+                                                    className='H3'
+                                                    sx={{
+                                                        fontWeight: 'bold',
+                                                        lineHeight: 1.2,
+                                                        fontSize: { xs: '1.4rem', sm: '1.6rem', md: '1.8rem', lg: '2.4rem' },
+                                                        mb: 2
+                                                    }}
+                                                >
+                                                    {slide.title}
+                                                </Typography>
+
+                                                <Box sx={{
+                                                    fontSize: { xs: '15px', md: '18px' },
+                                                    fontWeight: '500',
+                                                    mb: 4,
+                                                    color: '#5b5b5b'
+                                                }}>
+                                                    New Price : <span style={{ color: '#c09578', fontWeight: 'bold' }}>{slide.price}</span>
+                                                </Box>
+
+                                                <Button
+                                                    href="#"
+                                                    variant="contained"
+                                                    sx={{
+                                                        bgcolor: '#c09578',
+                                                        color: 'white',
+                                                        px: 4, py: 1.5,
+                                                        borderRadius: 0,
+                                                        textTransform: 'uppercase',
+                                                        '&:hover': { bgcolor: '#a37e63' }
+                                                    }}
+                                                >
+                                                    shop now
+                                                </Button>
                                             </Box>
-                                            <a href="#" className='A1'>shop now</a>
                                         </Box>
-                                    </Box>
-                                    <Box sx={{ height: '620px', position: 'relative' }}>
-                                        <img src={image2} alt="slider image" style={{ width: 'auto', objectFit: 'cover', padding: '0px 191px' }} />
-                                        <Box sx={{ position: 'absolute', top: '45%', left: '25%' }}>
-                                            <h5 className='H5'>Take a jewelry</h5>
-                                            <h3 className='H3'>Up to 25% off <br /> order now</h3>
-                                            <Box sx={{ fontSize: '18px', fontWeight: '500', marginBottom: '35px', color: '#5b5b5bff' }}>
-                                                Save Price :
-                                                <span className='Span'>$170.00</span>
-                                            </Box>
-                                            <a href="#" className='A1'>shop now</a>
-                                        </Box>
-                                    </Box>
-                                    <Box sx={{ height: '620px', position: 'relative' }}>
-                                        <img src={image3} alt="slider image" style={{ width: 'auto', objectFit: 'cover', padding: '0px 191px' }} />
-                                        <Box sx={{ position: 'absolute', top: '45%', left: '25%' }}>
-                                            <h5 className='H5'>Ysera Best collection</h5>
-                                            <h3 className='H3'>A range of <br /> jewelry</h3>
-                                            <Box sx={{ fontSize: '18px', fontWeight: '500', marginBottom: '35px', color: '#5b5b5bff' }}>
-                                                New Price :
-                                                <span className='Span'>$250.00</span>
-                                            </Box>
-                                            <a href="#" className='A1'>shop now</a>
-                                        </Box>
-                                    </Box>
+                                    ))}
                                 </Slider>
                             </Grid>
                         </Grid>
                     </Container>
-                </section>
+                </Box>
+
                 <section style={{ margin: '10px 0px 40px' }}>
-                    <Container className='container-2'>
-                        <Grid container sx={{ marginRight: '-15px', marginLeft: '-15px' }}>
-                            <Grid size={6} sx={{ padding: '0px 15px', float: 'left' }}>
-                                <Box>
-                                    <Box sx={{ width: '100%', height: '100%', position: 'relative', objectFit: 'cover', overflow: 'hidden', marginBottom: '30px', bgcolor: '#eee' }}>
-                                        <img src={image4} alt="banner" />
-                                        <Box sx={{ position: 'absolute', top: '32%', left: '8%' }}>
-                                            <h4 className='H4'>hurry up</h4>
-                                            <h3 className='H3'>Big Sale To <br /> 30% off</h3>
-                                            <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', marginBottom: '25px', color: '#666666' }}>
+                    <Container className='container-2' sx={{ mb: 4 }}>
+                        <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center' }}>
+                            {[
+                                { img: image4, sub: 'hurry up', title: <>Big Sale To <br /> 30% off</>, code: 'Ysera' },
+                                { img: image5, sub: 'Sale up to 50% off', title: <>get daily <br /> update</>, code: 'Ysera' }
+                            ].map((item, index) => (
+                                <Grid item xs={12} md={6} key={index}>
+                                    <Box sx={{
+                                        width: '100%',
+                                        position: 'relative',
+                                        overflow: 'hidden',
+                                        bgcolor: '#eee'
+                                    }}>
+                                        <img src={item.img} alt="banner" style={{ width: '100%', display: 'block' }} />
+                                        <Box sx={{
+                                            position: 'absolute',
+                                            top: '50%',
+                                            transform: 'translateY(-50%)',
+                                            left: '8%'
+                                        }}>
+                                            <h4 className='H4'>{item.sub}</h4>
+                                            <h3 className='H3'>{item.title}</h3>
+                                            <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', mb: 2, color: '#666666' }}>
                                                 use promo code :
-                                                <span style={{ fontSize: '14px', color: '#c09578', fontWeight: '700' }}>Ysera</span>
+                                                <span style={{ color: '#c09578', fontWeight: '700' }}> {item.code}</span>
                                             </Box>
                                             <a href="#" className='A1'>shop now</a>
                                         </Box>
                                     </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={6} sx={{ padding: '0px 15px', float: 'left' }}>
-                                <Box>
-                                    <Box sx={{ width: '100%', height: '100%', position: 'relative', objectFit: 'cover', overflow: 'hidden', marginBottom: '30px' }}>
-                                        <img src={image5} alt="banner" />
-                                        <Box sx={{ position: 'absolute', top: '32%', left: '8%' }}>
-                                            <h4 className='H4'>Sale up to 50% off</h4>
-                                            <h3 className='H3'>get daily <br /> update</h3>
-                                            <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', marginBottom: '25px', color: '#666666' }}>
-                                                use promo code :
-                                                <span style={{ fontSize: '14px', color: '#c09578', fontWeight: '700' }}>Ysera</span>
-                                            </Box>
-                                            <a href="#" className='A1'>shop now</a>
-                                        </Box>
-                                    </Box>
-                                </Box>
-                            </Grid>
+                                </Grid>
+                            ))}
                         </Grid>
                     </Container>
+
                     <Container className='container-3'>
-                        <Grid container sx={{ marginRight: '-15px', marginLeft: '-15px' }}>
-                            <Grid size={4} sx={{ padding: '0px 15px', float: 'left' }}>
-                                <Box>
-                                    <Box sx={{ width: '100%', height: '100%', position: 'relative', objectFit: 'cover', overflow: 'hidden', marginBottom: '20px' }}>
-                                        <img src={image6} alt="#" />
-                                        <Box sx={{ position: 'absolute', top: '20%', left: '10%' }}>
-                                            <h3 className='H3'>best seller</h3>
-                                            <Box sx={{ marginBottom: '20px', maxWidth: '190px', fontSize: '16px', lineHeight: '22px', display: 'block', color: '#666666' }}>
-                                                Check out our your <br /> jewelry collection now!
-                                            </Box>
-                                            <a href="#" className='A1'>shop now</a>
+                        <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Box sx={{ position: 'relative', overflow: 'hidden' }}>
+                                    <img src={image6} alt="#" style={{ width: '100%', display: 'block' }} />
+                                    <Box sx={{ position: 'absolute', top: '20%', left: '10%' }}>
+                                        <h3 className='H3'>best seller</h3>
+                                        <Box sx={{ mb: 2, maxWidth: '190px', fontSize: '16px', lineHeight: '1.4', color: '#666666' }}>
+                                            Check out our your <br /> jewelry collection now!
+                                        </Box>
+                                        <a href="#" className='A1'>shop now</a>
+                                    </Box>
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Box sx={{ position: 'relative', overflow: 'hidden' }}>
+                                    <img src={image8} alt="#" style={{ width: '100%', display: 'block' }} />
+                                    <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', width: '100%' }}>
+                                        <h3 className='H31'>End this weekend</h3>
+                                        <Box sx={{ mb: 2, fontSize: { xs: '24px', md: '36px' }, lineHeight: '1.2', fontWeight: '700' }}>
+                                            Big Sale <br /> 75% Off
+                                        </Box>
+                                        <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', color: '#666666' }}>
+                                            use promo code : <br />
+                                            <span style={{ fontSize: '18px', color: '#c09578', fontWeight: '700' }}>Ysera</span>
                                         </Box>
                                     </Box>
                                 </Box>
                             </Grid>
-                            <Grid size={4} sx={{ padding: '0px 15px', float: 'left' }}>
-                                <Box>
-                                    <Box sx={{ width: '100%', height: '100%', position: 'relative', objectFit: 'cover', overflow: 'hidden', marginBottom: '20px' }}>
-                                        <img src={image8} alt="#" />
-                                        <Box className='Box-1'>
-                                            <h3 className='H31'>End this weekend</h3>
-                                            <Box sx={{ marginBottom: '20px', maxWidth: '190px', fontSize: '36px', lineHeight: '1.2', display: 'block', fontWeight: '700' }}>
-                                                Big Sale <br /> 75% Off
-                                            </Box>
-                                            <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', marginBottom: '25px', color: '#666666' }}>
-                                                use promo code :
-                                                <span style={{ fontSize: '18px', color: '#c09578', fontWeight: '700' }}>Ysera</span>
-                                            </Box>
+
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Box sx={{ position: 'relative', overflow: 'hidden' }}>
+                                    <img src={image7} alt="#" style={{ width: '100%', display: 'block' }} />
+                                    <Box sx={{ position: 'absolute', top: '20%', left: '10%' }}>
+                                        <h3 className='H3'>look book</h3>
+                                        <Box sx={{ mb: 2, maxWidth: '190px', fontSize: '16px', lineHeight: '1.4', color: '#666666' }}>
+                                            New Jewelry Collections <br /> Summer Lookbook
                                         </Box>
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={4} sx={{ padding: '0px 15px', float: 'left' }}>
-                                <Box>
-                                    <Box sx={{ width: '100%', height: '100%', position: 'relative', objectFit: 'cover', overflow: 'hidden', marginBottom: '20px' }}>
-                                        <img src={image7} alt="#" />
-                                        <Box sx={{ position: 'absolute', top: '20%', left: '10%' }}>
-                                            <h3 className='H3'>look book</h3>
-                                            <Box sx={{ marginBottom: '20px', maxWidth: '190px', fontSize: '16px', lineHeight: '22px', display: 'block', color: '#666666' }}>
-                                                New Jewelry Collections <br /> Summer Lookbook
-                                            </Box>
-                                            <a href="#" className='A1'>view all</a>
-                                        </Box>
+                                        <a href="#" className='A1'>view all</a>
                                     </Box>
                                 </Box>
                             </Grid>
                         </Grid>
                     </Container>
                 </section>
+
                 <section style={{ padding: '40px 0px' }}>
                     <Container className='container-4'>
                         <Box sx={{ marginBottom: '25px', textAlign: 'center' }}>
@@ -198,10 +241,6 @@ const Main = () => {
                         </Box>
                         <Grid container>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: 'auto', height: '100%', position: 'relative' }}>
-                                    <img src={image16} style={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden' }} />
-                                    <Box sx={{ display: 'block', width: '100px', height: '100px' }}>1</Box>
-                                </Box> */}
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -223,9 +262,6 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image14} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -247,9 +283,6 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image12} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -271,9 +304,7 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image15} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
+
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -295,9 +326,7 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image13} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
+
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -319,9 +348,7 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image9} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
+
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -348,9 +375,7 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image10} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
+
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -372,9 +397,7 @@ const Main = () => {
                                 </Card>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ padding: '0px 15px', float: 'left', marginBottom: '20px', textAlign: 'center' }}>
-                                {/* <Box sx={{ width: '100%', height: '100%', objectFit: 'cover', overflow: 'hidden', position: 'relative' }}>
-                                    <img src={image11} style={{ width: '100%', height: '100%' }} />
-                                </Box> */}
+
                                 <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                                     <CardActionArea>
                                         <CardMedia
@@ -403,6 +426,7 @@ const Main = () => {
                         </Grid>
                     </Container>
                 </section>
+
                 <section style={{ padding: '60px 0px' }}>
                     <Container className='container-5'>
                         <Grid container>
@@ -463,6 +487,7 @@ const Main = () => {
                         </Grid>
                     </Container>
                 </section>
+
                 <section style={{ paddingTop: '50px', borderTop: '2px solid #eee', textAlign: 'center' }}>
                     <Container className='container-6'>
                         <Box sx={{ position: 'relative', fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', fontWeight: '700', display: 'table', margin: '0px auto 55px', paddingBottom: '15px', letterSpacing: '0' }}>
@@ -471,50 +496,48 @@ const Main = () => {
                                 Instagram Feed
                             </span>
                         </Box>
-                        <Grid container>
-                            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                                <Box className='Box-2' sx={{ overflow: 'hidden' }}>
-                                    <Box sx={{ position: 'relative', height: '288px' }}>
-                                        <img src={image20} alt="" className='image20' />
-                                        {/* <Box className='Box-3' sx={{ position: 'absolute', top: '11%', left: '85%', transform: 'translateY(-50%)', textAlign: 'center', zIndex: '5', fontSize: '25px', display: 'none' }}>
-                                            <InstagramIcon sx={{ fontSize: '35px', color: '#c09578', marginBottom: '8px' }} />
-                                        </Box> */}
+
+                        <Grid container spacing={2}>
+                            {[image20, image21, image22, image23].map((img, index) => (
+                                <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
+                                    <Box
+                                        className='Box-2'
+                                        sx={{
+                                            overflow: 'hidden',
+                                            borderRadius: '8px',
+                                            lineHeight: 0
+                                        }}
+                                    >
+                                        <Box
+                                            sx={{
+                                                position: 'relative',
+                                                height: {
+                                                    xs: 'auto',
+                                                    sm: '250px',
+                                                    md: '288px'
+                                                },
+                                                width: '100%'
+                                            }}
+                                        >
+                                            <img
+                                                src={img}
+                                                alt={`gallery-thumb-${index}`}
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    display: 'block'
+                                                }}
+                                            />
+                                        </Box>
                                     </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                                <Box className='Box-2' sx={{ overflow: 'hidden' }}>
-                                    <Box sx={{ position: 'relative', height: '288px' }}>
-                                        <img src={image21} alt="" className='image20' />
-                                        {/* <Box className='Box-3' sx={{ position: 'absolute', top: '11%', left: '85%', transform: 'translateY(-50%)', textAlign: 'center', zIndex: '5', fontSize: '25px', display: 'none' }}>
-                                            <InstagramIcon sx={{ fontSize: '35px', color: '#c09578', marginBottom: '8px' }} />
-                                        </Box> */}
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                                <Box className='Box-2' sx={{ overflow: 'hidden' }}>
-                                    <Box sx={{ position: 'relative', height: '288px' }}>
-                                        <img src={image22} alt="" className='image20' />
-                                        {/* <Box className='Box-3' sx={{ position: 'absolute', top: '11%', left: '85%', transform: 'translateY(-50%)', textAlign: 'center', zIndex: '5', fontSize: '25px', display: 'none' }}>
-                                            <InstagramIcon sx={{ fontSize: '35px', color: '#c09578', marginBottom: '8px' }} />
-                                        </Box> */}
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                                <Box className='Box-2' sx={{ overflow: 'hidden' }}>
-                                    <Box sx={{ position: 'relative', height: '288px' }}>
-                                        <img src={image23} alt="" className='image20' />
-                                        {/* <Box className='Box-3' sx={{ position: 'absolute', top: '11%', left: '85%', transform: 'translateY(-50%)', textAlign: 'center', zIndex: '5', fontSize: '25px', display: 'none' }}>
-                                            <InstagramIcon sx={{ fontSize: '35px', color: '#c09578', marginBottom: '8px' }} />
-                                        </Box> */}
-                                    </Box>
-                                </Box>
-                            </Grid>
+                                </Grid>
+                            ))}
                         </Grid>
+
                     </Container>
                 </section>
+
             </Layout>
         </>
     )

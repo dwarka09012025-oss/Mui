@@ -12,7 +12,7 @@
   content: '|';
 } */
 
-.container .Input {
+.container-1 .Input {
   width: 100%;
   border: none;
 }
@@ -221,13 +221,6 @@
   margin-bottom: 5px;
 }
 
-.container-3 .Box-1 {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  text-align: center;
-}
-
 .container-3 .Box-1 .H31 {
   color: #c09578;
   font-size: 14px;
@@ -355,4 +348,27 @@
 
 .container-8 .slick-dots {
   bottom: 15px !important;
+}
+
+.H4 {
+  font-size: clamp(12px, 2vw, 16px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.A1 {
+  display: inline-block;
+  padding: 10px 26px;
+  background-color: #c09578;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .A1 {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
 }
