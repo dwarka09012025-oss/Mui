@@ -2,34 +2,34 @@
 import React from 'react'
 import Layout from './Layout'
 import { Box, Container, Grid } from '@mui/material'
-import Slider from "react-slick"
-import image1 from "./Image/banner-01_full_width.jpg"
-import image2 from "./Image/banner-02_full_width.jpg"
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-// import CardActionArea from '@mui/material/CardActionArea';
-// import image9 from './Image/1.jpg'
-// import image10 from './Image/10.jpg'
-// import image11 from './Image/19.jpg'
-// import image12 from './Image/3.jpg'
-// import image13 from './Image/5.jpg'
-// import image14 from './Image/6.jpg'
-// import image15 from './Image/8.jpg'
-// import image16 from './Image/9.jpg'
+// import Slider from "react-slick"
+// import image1 from "./Image/banner-01_full_width.jpg"
+// import image2 from "./Image/banner-02_full_width.jpg"
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import CardActionArea from '@mui/material/CardActionArea';
+import image9 from './Image/1.jpg'
+import image10 from './Image/10.jpg'
+import image11 from './Image/19.jpg'
+import image12 from './Image/3.jpg'
+import image13 from './Image/5.jpg'
+import image14 from './Image/6.jpg'
+import image15 from './Image/8.jpg'
+import image16 from './Image/9.jpg'
 
 const Shop = () => {
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 3000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 1000
-    };
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 3000,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     autoplaySpeed: 1000
+    // };
 
     return (
         <>
@@ -86,7 +86,7 @@ const Shop = () => {
                     </Container>
                 </section> */}
 
-                <section>
+                {/* <section>
                     <Container maxWidth="xl" className="container-8">
                         <Grid container>
                             <Grid item xs={12}>
@@ -112,7 +112,6 @@ const Shop = () => {
                                                     }}
                                                 />
 
-                                                {/* Text Content */}
                                                 <Box
                                                     sx={{
                                                         position: "absolute",
@@ -171,10 +170,10 @@ const Shop = () => {
                             </Grid>
                         </Grid>
                     </Container>
-                </section>
+                </section> */}
 
 
-                {/* <section style={{ padding: '40px 0px' }}>
+                <section style={{ padding: '40px 0px' }}>
                     <Container className='container-4'>
                         <Box sx={{ marginBottom: '25px', textAlign: 'center' }}>
                             <h3 className='H3'>Our Products</h3>
@@ -361,7 +360,7 @@ const Shop = () => {
                             </Grid>
                         </Grid>
                     </Container>
-                </section> */}
+                </section>
 
             </Layout >
         </>

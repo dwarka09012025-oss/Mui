@@ -43,7 +43,7 @@ const Main = () => {
         speed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000
     };
     const settings1 = {
@@ -174,8 +174,8 @@ const Main = () => {
                                         }}>
                                             <h4 className='H4'>{item.sub}</h4>
                                             <h3 className='H3'>{item.title}</h3>
-                                            <Box sx={{ fontSize: '14px', fontWeight: '600', textTransform: 'uppercase', mb: 2, color: '#666666' }}>
-                                                use promo code :
+                                            <Box sx={{ fontSize: { xs: '12px', sm: '14px' }, fontWeight: '600', textTransform: 'uppercase', mb: 2, color: '#666666' }}>
+                                                use promo code : <br />
                                                 <span style={{ color: '#c09578', fontWeight: '700' }}> {item.code}</span>
                                             </Box>
                                             <a href="#" className='A1'>shop now</a>

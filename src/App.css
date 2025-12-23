@@ -12,7 +12,7 @@
   content: '|';
 } */
 
-.container-1 .Input {
+/* .container-1 .Input {
   width: 100%;
   border: none;
 }
@@ -37,6 +37,11 @@
   font-weight: 700;
   color: #000;
   text-decoration: none;
+} */
+
+.Hover li a:hover {
+  color: #c09578;
+  transition: all 0.5s;
 }
 
 /* ========== Foot.jsx ========== */
@@ -323,6 +328,16 @@
   transform: scale(1.1);
   filter: brightness(70%);
   transition: 0.7s;
+}
+
+@media (max-width:425px) {
+  .container-2 .H4 {
+    font-size: 12px;
+  }
+
+  .container-2 .H3 {
+    font-size: 25px;
+  }
 }
 
 /* ========== Shop.jsx ========== */

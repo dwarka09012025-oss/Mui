@@ -77,12 +77,12 @@ const Head = () => {
                         </Grid>
 
                         <Grid size={{ xs: 0, md: 7 }} sx={{ display: { xs: 'none', md: 'block' } }}>
-                            <Box component="ul" sx={{
+                            <Box className='Hover' component="ul" sx={{
                                 display: 'flex',
                                 listStyle: 'none',
                                 m: 0, p: 0,
                                 gap: 3,
-                                '& a': { textDecoration: 'none', color: '#333', fontWeight: 500 }
+                                '& a': { textDecoration: 'none', color: '#333', fontWeight: 500, fontSize: '18px' },
                             }}>
                                 {navLinks.map((item) => (
                                     <li key={item.title}>
