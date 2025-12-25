@@ -1,23 +1,23 @@
 import './App.css';
-// import RickApi from './components/RickApi';
+import RickApi from './components/RickApi';
 // import Head from './components/Head';
 // import Foot from './components/Foot';
 // import Layout from './components/Layout';
-import Main from './components/Main';
-import Shop from './components/Shop';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import Main from './components/Main';
+// import Shop from './components/Shop';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   return (
     <>
 
-      {/* <RickApi /> */}
+      <RickApi />
 
-      <Router>
+      {/* <Router>
         <Switch>
           <Route path="/shop">
             <Shop />
@@ -26,7 +26,7 @@ function App() {
             <Main />
           </Route>
         </Switch>
-      </Router>
+      </Router> */}
     </>
   );
 }
